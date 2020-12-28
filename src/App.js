@@ -1,4 +1,6 @@
 import React from "react";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppNav from "./components/AppNav/AppNav";
 import Home from "./pages/Home/Home.js";
 import "./App.css"
 // import NavComponent from "./components/NavComponent/NavComponent.js";
@@ -9,8 +11,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div>
-{/*         <NavComponent/> */}
+        <CssBaseline />
+        <AppNav/>
         <Switch>
             <Route exact path="/" component={Home} />
             {/* <Route exact path="/classes" component={Classes} />
@@ -20,7 +22,6 @@ function App() {
             <Route exact path="/adminhome" component={withAuth(AdminHome)} /> */}
         </Switch>
         {/* <Footer/> */}
-      </div>
     </BrowserRouter>
   );
 }
