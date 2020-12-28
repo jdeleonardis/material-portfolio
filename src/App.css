@@ -21,3 +21,5 @@ body:before {
 .Mui-selected {
 	background-color:#4287f5 !important;	
 }
+
+.carousel .slide{ background: none; }

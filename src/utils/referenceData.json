@@ -1,0 +1,30 @@
+
+{
+    "recommendations": [
+        {
+            "id": 1,
+            "order": 1,
+            "recommendation": "Jay is an amazing programmer, team player, and innovator. Jay took the time to understand the testing behind our LIMS system so that he could deliver a better product for us. He would often anticipate our needs and make suggestions for improvements and enhancements before we realized we were going to need it. No request was too large or to small for him and he never limited our creativity in the product. Jay is by far one of the best developers I have ever had the pleasure to work alongside.",
+            "giver": "Jennifer Dalton",
+            "title": "General Manager",
+            "company": "Laboratory Corporation Of America"
+        },
+        {
+            "id": 2,
+            "order": 2,
+            "recommendation": "Dedication, Technical proficiency, Team player…these are just a few of the outstanding traits that come to mind when describing Jay DeLeonardis.",
+            "giver": "Jonathan Medley",
+            "title": "Lead Project Analyst",
+            "company": "Laboratory Corporation Of America"
+        },        
+        {
+            "id": 3,
+            "order": 3,
+            "recommendation": "I cannot recommend Jay highly enough and I will miss having his positive attitude and sense of humor around. Good colleagues can be hard to come by, and your team would be missing out on the opportunity for a great one by not considering Jay.",
+            "giver": "Thomas Erickson",
+            "title": "Lead Project Analyst",
+            "company": "Laboratory Corporation Of America"
+        }             
+
+    ]
+}

@@ -1,26 +1,22 @@
 import React, {useState} from 'react';
 import clsx from 'clsx';
-// import { withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HouseIcon from '@material-ui/icons/House';
 import FaceIcon from '@material-ui/icons/Face';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
+import ResumeIcon from '@material-ui/icons/FolderSpecial';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -134,7 +130,9 @@ export default function Home() {
         case 'About':
             return <FaceIcon className={classes.icon}/>            
         case 'Portfolio':
-            return <MenuBookIcon className={classes.icon}/>                
+            return <MenuBookIcon className={classes.icon}/>   
+        case 'Resume':
+            return <ResumeIcon className={classes.icon}/>                           
         case 'Contact':
             return <ContactMailIcon className={classes.icon}/>
         default:
@@ -197,7 +195,7 @@ export default function Home() {
           </div>
           <Divider />
           <List>
-            {['Home', 'About', 'Portfolio', 'Contact'].map((text, index) => (
+            {['Home', 'About', 'Portfolio', 'Resume', 'Contact'].map((text, index) => (
               
               //see HtmlToolTip declaration above
               <HtmlTooltip     
