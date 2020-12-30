@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import ReferenceCarousel from '../../components/ReferenceCarousel/ReferenceCarousel'
 import Data from "../../utils/referenceData.json";
+import './home.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,25 +15,23 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '100px'
   },
   heading: {
+    // fontFamily: 'Macondo Swash Caps, cursive',
+    textShadow: '1px 1px 2px black, 5px 5px 5px #5A674F, 0 0 5px #5A674F',
     padding: theme.spacing(1),
     textAlign: 'center',
-    fontSize: '36px',
+    fontSize: '50px',
     color: 'white',
-    background: 'transparent'
+    background: 'transparent',
+    marginTop: '-40px'
   },
   subheading: {
+    textShadow: '1px 1px 2px black, 1px 1px 2px black',    
     padding: theme.spacing(1),
     textAlign: 'center',
     fontSize: '28px',
     color: 'white',
     background: 'transparent'
   },
-  paper1: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    justifyContent: 'flex-end',
-    color: theme.palette.text.secondary,
-  },  
   toolbar: {
     display: 'flex',
     alignItems: 'center',
@@ -64,7 +63,7 @@ export default function Home() {
           >
           <Grid item xs={12} sm={8} md={6}>
             <Box mb={4}>
-              <Paper elevation={0} className={classes.heading}>Let me create your corner of the internet</Paper>
+              <Paper elevation={0} className={classes.heading}>Let me create your unique spot on the internet!</Paper>
             </Box>
           </Grid>  
         </Grid>
@@ -79,24 +78,22 @@ export default function Home() {
           alignItems="center"
           >
           <Grid item xs={12} sm={8} md={6}>
-            <Box mb={15}>
+            <Box mb={5}>
               <Paper elevation={0} className={classes.subheading}>I am a Front End Developer dedicated to efficient, mobile-responsive, and interesting online user experiences.</Paper>
             </Box>
           </Grid>  
         </Grid>      
 
-        {/* <ReferenceCarousel/>          */}
-
         <Grid 
           container 
           xs={11} 
-          sm={12} 
+          // sm={12} 
           spacing={3}
-          justify="flex-end"
+          justify="flex-start"
           direction="row"
-          alignItems="center"
+          // alignItems="center"
           >
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={11} lg={7}>
             <ReferenceCarousel
               data={data}
             />            

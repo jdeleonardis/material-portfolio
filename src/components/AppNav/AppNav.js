@@ -19,6 +19,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ResumeIcon from '@material-ui/icons/FolderSpecial';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Tooltip from '@material-ui/core/Tooltip';
+import './appnav.css'
 
 const drawerWidth = 170;
 
@@ -30,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex: theme.zIndex.drawer + 1,
     // height: '50px',
     // width:'0px',
-    backgroundColor:  'rgba(9,17,52,1)',
+    // backgroundColor:  'rgba(9,17,52,1)',
+    backgroundColor:  '#1C1614',
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -61,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    backgroundColor: 'rgba(9,17,52,1)'
+    // backgroundColor: 'rgba(9,17,52,1)'
+    backgroundColor:  '#1C1614',
     
   },
   drawerClose: {
@@ -74,7 +77,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1,
     },
-    backgroundColor: 'rgba(9,17,52,1)'    
+    // backgroundColor: 'rgba(9,17,52,1)'   
+    backgroundColor:  '#1C1614',
   },
   toolbar: {
     display: 'flex',
@@ -169,8 +173,11 @@ export default function Home() {
               // htmlColor='red'
               />
             </IconButton>
-            <Typography variant="h6" noWrap>
+            {/* <Typography variant="h6" noWrap>
               James L DeLeonardis
+            </Typography> */}
+            <Typography variant="h6">
+              <a href="/" style={{textDecoration: 'none', color: 'white'}}>James L DeLeonardis</a>
             </Typography>
           </Toolbar>
         </AppBar>

@@ -22,9 +22,72 @@
             "order": 3,
             "recommendation": "I cannot recommend Jay highly enough and I will miss having his positive attitude and sense of humor around. Good colleagues can be hard to come by, and your team would be missing out on the opportunity for a great one by not considering Jay.",
             "giver": "Thomas Erickson",
+            "title": "Teaching Assistant",
+            "company": "2U"
+        },    
+        {
+            "id": 4,
+            "order": 4,
+            "recommendation": "I have had the opportunity to work with lots of talented students, but it is rare to come across a talented student as hard-working and driven as Jay. Beyond his obvious talent Jay has gone above and beyond to learn everything he can so that his code is not only functional, but efficient and elegantly written.",
+            "giver": "Thomas Erickson",
+            "title": "Teaching Assistant",
+            "company": "2U"
+        },                 
+        {
+            "id": 5,
+            "order": 5,
+            "recommendation": "Jay has an extensive background in managing databases and has added an ability to make flawless front-end interfaces and an impressive knowledge of JavaScript to supplement that experience. Never one to back down from a challenge Jay has built out several impressive Full-Stack applications and would be a valuable addition to any team - whether that team's need is front-end, back-end, or full-stack.",
+            "giver": "Thomas Erickson",
+            "title": "Teaching Assistant",
+            "company": "2U"
+        },
+        {
+            "id": 6,
+            "order": 6,
+            "recommendation": "Despite the ever-changing requirements that occur in software systems over time, much of Jay’s code and overall design are still in place today requiring little to no maintenance or refactoring. This is the sign of a highly astute developer in that Jay created a dynamic system that continues to scale and grow with the needs and demands of the business.",
+            "giver": "Jonathan Medley",
             "title": "Lead Project Analyst",
             "company": "Laboratory Corporation Of America"
-        }             
-
+        },
+        {
+            "id": 7,
+            "order": 7,
+            "recommendation": "Jay also brings into the workplace environment an exceptionally good work ethic as well as the appropriate dose of humor. On numerous occasions, Jay’s positive attitude served to create a more amiable work atmosphere that resulted in better collaboration and productivity within the team.",
+            "giver": "Jonathan Medley",
+            "title": "Lead Project Analyst",
+            "company": "Laboratory Corporation Of America"
+        },                
+        {
+            "id": 8,
+            "order": 8,
+            "recommendation": "Jay earns my highest recommendation. Any company looking to add a valuable member to its software team should look no further.",
+            "giver": "Jonathan Medley",
+            "title": "Lead Project Analyst",
+            "company": "Laboratory Corporation Of America"
+        },
+        {
+            "id": 9,
+            "order": 9,
+            "recommendation": "On all occasions, I found Mr. DeLeonardis to be extremely knowledgeable and very timely in his delivery of high quality work. He is most certainly a team player and I would welcome him on any project team of which I am a part.",
+            "giver": "Jamison Chang",
+            "title": "Chief Medical Officer",
+            "company": "Rho"
+        },      
+        {
+            "id": 10,
+            "order": 10,
+            "recommendation": "Jay is such a focused, dedicated, and approachable worker. He took the time to learn new complicated technologies even if it took all night. He was so patient and had a great mindset when approaching the applications we made. I learned so much from him and I hope to work with him again in the future.",
+            "giver": "Monica Polanco Fabian",
+            "title": "Full Stack Software Developer",
+            "company": "IBM"
+        },
+        {
+            "id": 11,
+            "order": 11,
+            "recommendation": "Jay is an extremely hard working individual. He will tackle any task at hand with full effort. While working with Jay, he never shied away from any task. He would research and implement any new package needed for the project. Jay was a great team member. He made me feel like I was heard and supported throughout every step of the process.",
+            "giver": "Jessica Ringler",
+            "title": "Teacher",
+            "company": "Chatham County Schools"
+        }                           
     ]
 }

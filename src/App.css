@@ -1,3 +1,10 @@
+* {	
+    font-family: 'Poppins', sans-serif;
+	font-weight: '400';
+	/* line-height: '8'; */
+	/* letter-spacing: 0.07em;	 */
+}
+
 body:before {
 	content:"";
 	position:fixed;
@@ -6,20 +13,4 @@ body:before {
 	right:0;
 	bottom:0;
 	z-index:-1; 
-
-  /* background: rgb(255,255,255);
-  background: linear-gradient(152deg, rgba(255,255,255,1) 50%, rgba(9,17,52,1) 50%); */
-
-  background: url(images/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;  
 }
-
-
-.Mui-selected {
-	background-color:#4287f5 !important;	
-}
-
-.carousel .slide{ background: none; }
