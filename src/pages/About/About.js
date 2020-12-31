@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
-// import Paper from '@material-ui/core/Paper';
-// import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
 // import ReferenceCarousel from '../../components/ReferenceCarousel/ReferenceCarousel'
 // import Data from "../../utils/referenceData.json";
 import './about.css'
@@ -31,14 +31,26 @@ export default function About() {
 
   return (
     <>    
-      <body className='about'>
-        <div className={classes.toolbar} />
+
+        {/* <div className={classes.toolbar} /> */}
         <div className={classes.root}>
-            <div>
-                this is a test
-            </div>
+        <Grid 
+          container 
+          xs={11} 
+          sm={12} 
+          spacing={3}
+          justify="flex-start"
+          direction="row"
+          alignItems="center"
+          >
+          <Grid item xs={12} sm={8} md={7}>            
+            <Box ml={15} mt={13} mb={4}> 
+              <Paper elevation={0} className={classes.heading}>Let me create your unique spot on the internet!</Paper>
+            </Box>
+          </Grid>  
+        </Grid>
         </div>
-      </body>
+
     </>
     )
 }

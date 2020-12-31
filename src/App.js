@@ -26,7 +26,6 @@ function App() {
             <Route exact path="/login" component={Login} />                              
             <Route exact path="/adminhome" component={withAuth(AdminHome)} /> */}
         </Switch>
-        {/* <Footer/> */}
     </BrowserRouter>
   );
 }

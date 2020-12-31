@@ -20,6 +20,8 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ResumeIcon from '@material-ui/icons/FolderSpecial';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Tooltip from '@material-ui/core/Tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 import './appnav.css'
 
 const drawerWidth = 170;
@@ -95,7 +97,13 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
       color: 'white'
-  }
+  },
+  faIcon: {
+    fontSize: 28,
+    color: 'white'
+    // padding if needed (e.g., theme.spacing.unit * 2)
+    // margin if needed
+  },
 }));
 
 
@@ -141,6 +149,16 @@ export default function AppNav() {
     setOpen(false)
   }
 
+  const toSocialMedia =(text) => {    
+    if (text==='LinkedIn') {
+      window.open("https://www.linkedin.com/in/jamesdeleonardis/", '_blank');
+    }
+    else {
+      window.open("https://github.com/jdeleonardis", '_blank');
+    }
+    
+  }
+
   const iconSwitch = (icon) => {
     switch(icon) {
         case 'Home':
@@ -157,6 +175,17 @@ export default function AppNav() {
             return <></>
     }
   }
+
+  const socialIconSwitch = (icon) => {    
+    switch(icon) {
+        case 'LinkedIn':
+            return <FontAwesomeIcon className={classes.faIcon} icon={faLinkedin} />
+        case 'GitHub':
+            return <FontAwesomeIcon className={classes.faIcon} icon={faGithub} />          
+        default:
+            return <></>
+    }
+  }  
 
   return (
     <div>
@@ -187,6 +216,12 @@ export default function AppNav() {
             <Typography variant="h6">
               <a href="/" style={{textDecoration: 'none', color: 'white'}}>James L DeLeonardis</a>
             </Typography>
+            {/* <div style={{width: '400px', textAlign: 'right'}}>
+              <ButtonGroup disableElevation variant="contained" color="primary">
+                <Button>One</Button>
+                <Button>Two</Button>            
+              </ButtonGroup>
+            </div> */}
           </Toolbar>
         </AppBar>
         <Drawer
@@ -208,7 +243,7 @@ export default function AppNav() {
               {/* {theme.direction === 'rtl' ? <ChevronRightIcon htmlColor='white'/> : <ChevronLeftIcon htmlColor='white'/>} */}
             </IconButton>
           </div>
-          <Divider />
+          {/* <Divider /> */}
           <List component='nav'>
             {['Home', 'About', 'Portfolio', 'Resume', 'Contact'].map((text, index) => (
 
@@ -216,9 +251,10 @@ export default function AppNav() {
               <HtmlTooltip     
               title={
                 <>
-                  <Typography color="inherit">Tooltip with HTML</Typography>
+                  <Typography color="inherit">{text}</Typography>
+                  {/* <Typography color="inherit">Tooltip with HTML</Typography>
                   <em>{"And here's"}</em> <b>{'some'}</b> <u>{'amazing content'}</u>.{' '}
-                  {"It's very engaging. Right?"} {text}
+                  {"It's very engaging. Right?"} {text} */}
                 </>
               }
               enterDelay={600}
@@ -241,7 +277,38 @@ export default function AppNav() {
               </HtmlTooltip>
             ))}
           </List>
-          {/* <Divider /> */}
+          <Divider />
+          <List component='nav'>
+            {['LinkedIn', 'GitHub'].map((text, index) => (
+
+              //see HtmlToolTip declaration above
+              <HtmlTooltip     
+              title={
+                <>
+                  {/* <Typography color="inherit">Tooltip with HTML</Typography>
+                  <em>{"And here's"}</em> <b>{'some'}</b> <u>{'amazing content'}</u>.{' '}
+                  {"It's very engaging. Right?"} {text} */}
+                  <Typography color="inherit">{text}</Typography>
+                </>
+              }
+              enterDelay={600}
+              enterNextDelay={600} 
+            >
+  
+              <ListItem 
+                  button
+                  key={text}
+                  onClick={() => toSocialMedia(text)}                  
+                  >
+                  <ListItemIcon>                  
+                    {socialIconSwitch(text)}
+                  </ListItemIcon>             
+                  <ListItemText primary={text} className={classes.icon}/>  
+              </ListItem>
+  
+              </HtmlTooltip>
+            ))}
+          </List>          
         </Drawer>
     </div>
 

@@ -1,8 +1,14 @@
-body {  
+.homeContainer {  
   background: url(/src/images/lep1.png) no-repeat center top fixed;  
-  /* background-position: 50px -60px; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }
