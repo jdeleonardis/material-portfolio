@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {Link, useLocation} from 'react-router-dom'
 import clsx from 'clsx';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -108,11 +109,23 @@ const HtmlTooltip = withStyles((theme) => ({
     },
   }))(Tooltip);
 
-export default function Home() {
+export default function AppNav() {
   const classes = useStyles();
+  const location = useLocation();
   // const theme = useTheme();
   const [open, setOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0); 
+
+  useEffect(() => {
+    //special code here to make sure that when a browser reload occurs, the selected nav item is highlighted correctly.
+    let path = location.pathname;
+    if (path=== "/" && selectedIndex !== 0) setSelectedIndex(0);
+    else if (path=== "/about" && selectedIndex !== 1) setSelectedIndex(1);
+    else if (path=== "/portfolio" && selectedIndex !== 2) setSelectedIndex(2);
+    else if (path=== "/resume" && selectedIndex !== 3) setSelectedIndex(3);
+    else if (path=== "/contact" && selectedIndex !== 4) setSelectedIndex(4);
+
+  }, [location,selectedIndex,]);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -124,7 +137,8 @@ export default function Home() {
 
   const clickHandler = (event, text, index) => {
     //   alert(text)
-      setSelectedIndex(index)
+    setSelectedIndex(index)
+    setOpen(false)
   }
 
   const iconSwitch = (icon) => {
@@ -140,18 +154,12 @@ export default function Home() {
         case 'Contact':
             return <ContactMailIcon className={classes.icon}/>
         default:
-            return <></>                                
-
-
+            return <></>
     }
   }
 
-
-
   return (
     <div>
-
-
         <AppBar
           position="fixed"
           className={clsx(classes.appBar, {
@@ -201,9 +209,9 @@ export default function Home() {
             </IconButton>
           </div>
           <Divider />
-          <List>
+          <List component='nav'>
             {['Home', 'About', 'Portfolio', 'Resume', 'Contact'].map((text, index) => (
-              
+
               //see HtmlToolTip declaration above
               <HtmlTooltip     
               title={
@@ -219,13 +227,15 @@ export default function Home() {
   
               <ListItem 
                   button
+                  component={Link}
+                  to={text.toLowerCase()}
                   key={text}
                   // onClick={() => setCollapsed(!collapsed)}>
                   onClick={(event) => clickHandler(event, text, index)}
                   selected={selectedIndex === index}
                   >
                   <ListItemIcon>{iconSwitch(text)}</ListItemIcon>             
-                  <ListItemText primary={text} className={classes.icon}/>
+                  <ListItemText primary={text} className={classes.icon}/>  
               </ListItem>
   
               </HtmlTooltip>

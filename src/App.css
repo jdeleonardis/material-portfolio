@@ -14,3 +14,10 @@ body:before {
 	bottom:0;
 	z-index:-1; 
 }
+
+/* body.about,
+body.portfolio,
+body.resume,
+body.contact {
+    background-image: none;  
+} */
