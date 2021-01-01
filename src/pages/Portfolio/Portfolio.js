@@ -1,7 +1,6 @@
 import React from "react";
-// import Paper from "@material-ui/core/Paper";
-// import Grid from "@material-ui/core/Grid";
-import './about.css'
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const classes = {
   root: {
@@ -26,13 +25,12 @@ const classes = {
   }
 };
 
-export default function About() {
+export default function Portfolio() {
   return (
 
   <div style={{marginTop: '60px', marginLeft: '100px', marginRight: '40px'}}>
-
-TEST TEST TEST  
-      {/* <Grid container className={classes.root} spacing={3}>
+  
+      <Grid container className={classes.root} spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>xs=12</Paper>
         </Grid>
@@ -54,9 +52,8 @@ TEST TEST TEST
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>xs=6 sm=3</Paper>
         </Grid>
-      </Grid> */}
- </div>
- 
+      </Grid>
+      </div>
 
   );
 }
