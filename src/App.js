@@ -6,8 +6,6 @@ import About from "./pages/About/About.js";
 import Portfolio from "./pages/Portfolio/Portfolio.js";
 import Contact from "./pages/Contact/Contact.js";
 import "./App.css"
-// import NavComponent from "./components/NavComponent/NavComponent.js";
-// import Footer from "./components/Footer/Footer.js";
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 function App() {
@@ -24,11 +22,6 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />            
             <Route exact path="/contact" component={Contact} /> 
-            {/* <Route exact path="/classes" component={Classes} />
-            <Route exact path="/resources" component={Resources} />            
-            <Route exact path="/contact" component={Contact} />                    
-            <Route exact path="/login" component={Login} />                              
-            <Route exact path="/adminhome" component={withAuth(AdminHome)} /> */}
         </Switch>
     </BrowserRouter>
   );
