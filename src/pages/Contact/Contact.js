@@ -25,14 +25,14 @@ const classes = {
   }
 };
 
-export default function Portfolio() {
+export default function Contact() {
   return (
 
   <div style={{marginTop: '60px', marginLeft: '100px', marginRight: '40px'}}>
-  
-  PORTFOLIO
 
-  <Grid container className={classes.root} spacing={3} style={{paddingLeft: '30px', paddingRight: '30px'}}>
+CONTACT
+  
+<Grid container className={classes.root} spacing={3} style={{paddingLeft: '30px', paddingRight: '30px'}}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>xs=12</Paper>
         </Grid>

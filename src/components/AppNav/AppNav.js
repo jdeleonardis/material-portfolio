@@ -126,12 +126,11 @@ export default function AppNav() {
 
   useEffect(() => {
     //special code here to make sure that when a browser reload occurs, the selected nav item is highlighted correctly.
-    let path = location.pathname;
+    let path = location.pathname;    
     if (path=== "/" && selectedIndex !== 0) setSelectedIndex(0);
     else if (path=== "/about" && selectedIndex !== 1) setSelectedIndex(1);
-    else if (path=== "/portfolio" && selectedIndex !== 2) setSelectedIndex(2);
-    else if (path=== "/resume" && selectedIndex !== 3) setSelectedIndex(3);
-    else if (path=== "/contact" && selectedIndex !== 4) setSelectedIndex(4);
+    else if (path=== "/portfolio" && selectedIndex !== 2) setSelectedIndex(2);    
+    else if (path=== "/contact" && selectedIndex !== 3) setSelectedIndex(4);
 
   }, [location,selectedIndex,]);
 
@@ -153,6 +152,9 @@ export default function AppNav() {
     if (text==='LinkedIn') {
       window.open("https://www.linkedin.com/in/jamesdeleonardis/", '_blank');
     }
+    if (text==='Resume') {
+      window.open("https://drive.google.com/file/d/1Vy9gyjZP4T3VG_lN73l8Zz8RDhQOD4t-/view?usp=sharing", '_blank');
+    }    
     else {
       window.open("https://github.com/jdeleonardis", '_blank');
     }
@@ -167,8 +169,6 @@ export default function AppNav() {
             return <FaceIcon className={classes.icon}/>            
         case 'Portfolio':
             return <MenuBookIcon className={classes.icon}/>   
-        case 'Resume':
-            return <ResumeIcon className={classes.icon}/>                           
         case 'Contact':
             return <ContactMailIcon className={classes.icon}/>
         default:
@@ -178,6 +178,8 @@ export default function AppNav() {
 
   const socialIconSwitch = (icon) => {    
     switch(icon) {
+        case 'Resume':
+            return <ResumeIcon className={classes.icon}/>       
         case 'LinkedIn':
             return <FontAwesomeIcon className={classes.faIcon} icon={faLinkedin} />
         case 'GitHub':
@@ -245,7 +247,7 @@ export default function AppNav() {
           </div>
           {/* <Divider /> */}
           <List component='nav'>
-            {['Home', 'About', 'Portfolio', 'Resume', 'Contact'].map((text, index) => (
+            {['Home', 'About', 'Portfolio', 'Contact'].map((text, index) => (
 
               //see HtmlToolTip declaration above
               <HtmlTooltip     
@@ -277,9 +279,9 @@ export default function AppNav() {
               </HtmlTooltip>
             ))}
           </List>
-          <Divider />
+          <Divider style={{backgroundColor: "#8F7547"}}/>
           <List component='nav'>
-            {['LinkedIn', 'GitHub'].map((text, index) => (
+            {['Resume', 'LinkedIn', 'GitHub'].map((text, index) => (
 
               //see HtmlToolTip declaration above
               <HtmlTooltip     

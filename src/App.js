@@ -4,6 +4,7 @@ import AppNav from "./components/AppNav/AppNav";
 import Home from "./pages/Home/Home.js";
 import About from "./pages/About/About.js";
 import Portfolio from "./pages/Portfolio/Portfolio.js";
+import Contact from "./pages/Contact/Contact.js";
 import "./App.css"
 // import NavComponent from "./components/NavComponent/NavComponent.js";
 // import Footer from "./components/Footer/Footer.js";
@@ -21,7 +22,8 @@ function App() {
                 <Redirect to="/"/>
             </Route>
             <Route exact path="/about" component={About} />
-            <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/portfolio" component={Portfolio} />            
+            <Route exact path="/contact" component={Contact} /> 
             {/* <Route exact path="/classes" component={Classes} />
             <Route exact path="/resources" component={Resources} />            
             <Route exact path="/contact" component={Contact} />                    

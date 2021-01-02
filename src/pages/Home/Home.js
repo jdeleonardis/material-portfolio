@@ -80,7 +80,7 @@ export default function Home() {
           >
           <Grid item xs={12} sm={8} md={7}>
             <Box ml={15} mb={5}>
-              <Paper elevation={0} className={classes.subheading}>I am a Front End Developer dedicated to efficient, mobile responsive designs, and interesting online user experiences.</Paper>
+              <Paper elevation={0} className={classes.subheading}>I am a Front End Developer dedicated to efficient, mobile responsive, and interesting online user experiences.</Paper>
             </Box>
           </Grid>  
         </Grid>      
