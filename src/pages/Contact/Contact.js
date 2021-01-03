@@ -1,6 +1,7 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import PageHeader from '../../components/PageHeader/PageHeader'
 
 const classes = {
   root: {
@@ -30,9 +31,9 @@ export default function Contact() {
 
   <div style={{marginTop: '60px', marginLeft: '100px', marginRight: '40px'}}>
 
-CONTACT
+    <PageHeader pageTitle='CONTACT'/>
   
-<Grid container className={classes.root} spacing={3} style={{paddingLeft: '30px', paddingRight: '30px'}}>
+<Grid container className={classes.root} spacing={3} style={{paddingLeft: '20px', paddingRight: '20px', marginTop: '10px' }}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>xs=12</Paper>
         </Grid>

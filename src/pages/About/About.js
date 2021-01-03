@@ -1,7 +1,6 @@
 import React from "react";
-// import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-// import './about.css'
+import PageHeader from '../../components/PageHeader/PageHeader'
 
 const classes = {
   root: {
@@ -29,20 +28,17 @@ export default function About() {
   return (
 
   <div style={{marginTop: '60px', marginLeft: '100px', marginRight: '40px'}}>
-    ABOUT
-      <Grid container className={classes.root} spacing={3} style={{paddingLeft: '30px', paddingRight: '30px'}}>
-      <Grid item xs={12}>
+
+    <PageHeader pageTitle='ABOUT'/>
+      <Grid container className={classes.root} spacing={3} style={{paddingLeft: '20px', paddingRight: '20px'}}>
+        <Grid item xs={12}>
             <div style={pageStyles.leftBox}>                                    
-                <img src={require('../../images/photo0.jpg').default} className="img" alt="Responsive" style={pageStyles.img}></img>       
+                <img src={require('../../images/photo0.jpg').default} className="img" alt="Jay" style={pageStyles.img}></img>       
                 <br></br>
-                jdeleonardis13@gmail.com
+                <span style={{fontWeight: 600}}>jdeleonardis13@gmail.com</span>
                 <br></br>
-                919-599-8859
-                {/* <br></br>
-                <a href="https://drive.google.com/drive/folders/1EoBzBeLuYyZrhAZyqMd0qmbAl8GLv7qL" target="_blank" rel="noopener noreferrer">Resume</a> */}
+                <span style={{fontWeight: 600}}>919-599-8859</span>
             </div>
-      {/* </Grid>
-      <Grid item xs={9}> */}
             <div>
                 <p style={pageStyles.paragraph}>Hello!  My name is Jay DeLeonardis and I am a web developer from Hillsborough, North Carolina.  I have spent nearly 25 years as a software developer, 
                     but have recently reimagined my career by enrolling in and completing a Full Stack Developer program at the University of North Carolina.
@@ -74,8 +70,8 @@ export default function About() {
                     in the IT industry.
                 </p>
             </div>                  
-            </Grid>
-            </Grid>
+        </Grid>
+      </Grid>
  </div>
  
 
