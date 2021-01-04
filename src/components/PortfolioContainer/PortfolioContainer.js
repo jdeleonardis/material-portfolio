@@ -6,15 +6,30 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-
-import DeleteIcon from '@material-ui/icons/Delete';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import Icon from '@material-ui/core/Icon';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Chip from '@material-ui/core/Chip';
 
   const useStyles = makeStyles((theme) => ({
-    button: {
+    buttonGreen: {
         margin: theme.spacing(1),
+        color: 'white',
+        backgroundColor: '#5A674F'
+    },  
+    buttonBrown: {
+      margin: theme.spacing(1),
+      color: 'white',
+      backgroundColor: '#8F7547'
+    },
+    chipContainer: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > *': {
+        margin: theme.spacing(0.5),      
+      },
+      marginBottom: '10px',
+      listStyle: 'none'
     }
   }));
 
@@ -45,35 +60,33 @@ export default function PortfolioContainer(props) {
                                 {project.description}                            
                             </Typography>
                         </CardContent>
-                        {/* <a href="https://espn.com" rel="noopener noreferrer" target="_blank" className={classes.cardButton} role="button">Deployed</a> */}
-                        <a href="https://espn.com" rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
-                        <Button
-        variant="contained"
-        color="secondary"
-        className={classes.button}
-        startIcon={<DeleteIcon />}
-      >
-          {/* deployed and git */}
-        Delete 
-      </Button>
-      </a>
-      {/* This Button uses a Font Icon, see the installation instructions in the Icon component docs. */}
-      <Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        endIcon={<Icon>send</Icon>}
-      >
-        Send
-      </Button>
-      <Button
-        variant="contained"
-        color="default"
-        className={classes.button}
-        startIcon={<CloudUploadIcon />}
-      >
-        Upload
-      </Button>
+                        <div className={classes.chipContainer}>
+                        {project.techUsed.map((tech) => {                          
+                            return (
+                              <li key={tech}>
+                                <Chip label={tech} size="small" variant="outlined" />                                
+                              </li>
+                            );
+                          })}
+                        </div>
+                        <a href={project.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
+                          <Button
+                          variant="contained"                          
+                          className={classes.buttonGreen}          
+                          startIcon={<ArrowForwardIosIcon />}
+                          >
+                            Deployed 
+                          </Button>
+                        </a>      
+                        <a href={project.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
+                          <Button
+                            variant="contained"                            
+                            className={classes.buttonBrown}                           
+                          >
+                            <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
+                            GitHub
+                          </Button>
+                        </a>
                     </Card>          
                 </Grid>
             ))}
