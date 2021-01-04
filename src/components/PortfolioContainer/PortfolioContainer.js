@@ -4,38 +4,10 @@ import Card from "@material-ui/core/Card";
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import Chip from '@material-ui/core/Chip';
-
-  const useStyles = makeStyles((theme) => ({
-    buttonGreen: {
-        margin: theme.spacing(1),
-        color: 'white',
-        backgroundColor: '#5A674F'
-    },  
-    buttonBrown: {
-      margin: theme.spacing(1),
-      color: 'white',
-      backgroundColor: '#8F7547'
-    },
-    chipContainer: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      '& > *': {
-        margin: theme.spacing(0.5),      
-      },
-      marginBottom: '10px',
-      listStyle: 'none'
-    }
-  }));
+import Chips from '../Chips/Chips'
+import ProjectButtons from '../ProjectButtons/ProjectButtons'
 
 export default function PortfolioContainer(props) {
-
-    const classes = useStyles();
 
     const projectArray = props.data.results.filter(project =>    
         project.type === props.type    
@@ -60,16 +32,17 @@ export default function PortfolioContainer(props) {
                                 {project.description}                            
                             </Typography>
                         </CardContent>
-                        <div className={classes.chipContainer}>
-                        {project.techUsed.map((tech) => {                          
-                            return (
-                              <li key={tech}>
-                                <Chip label={tech} size="small" variant="outlined" />                                
-                              </li>
-                            );
-                          })}
-                        </div>
-                        <a href={project.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
+                        
+                        <Chips 
+                          techUsed={project.techUsed}
+                        />
+
+                        <ProjectButtons
+                          deployedAddress={project.deployedAddress}
+                          repoAddress={project.repoAddress}
+                        />
+
+                        {/* <a href={project.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
                           <Button
                           variant="contained"                          
                           className={classes.buttonGreen}          
@@ -86,7 +59,7 @@ export default function PortfolioContainer(props) {
                             <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
                             GitHub
                           </Button>
-                        </a>
+                        </a> */}
                     </Card>          
                 </Grid>
             ))}

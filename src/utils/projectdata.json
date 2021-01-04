@@ -89,7 +89,7 @@
             "id": 9,
             "appName": "Yoga With Melissa Bennett",
             "description": "This mobile responsive MERN stack application was built for a volunteer yoga teacher that works with Warriors At Ease, an organization focused on the well being of our country’s veterans. The application gives information about the teacher and class, and allows students to sign up for classes at different locations. Additionally, the site gives the teacher the ability to log in to an admin page (using json web tokens for security) where she can add, edit, and cancel classes using a calendar (open source library ‘react big calendar’). When classes are cancelled, the teacher can create a message that is automatically sent as email to all students that have signed up for a class.",
-            "techUsed": ["React-Bootstrap", "React-Big-Calendar", "EmailJS", "JSON Web Tokens (JWT)", "React Router", "geocoding API", "axios", "Node.js", "Express", "MongoDB", "Mongoose", "AtlasDB"],
+            "techUsed": ["React","React-Bootstrap", "React-Big-Calendar", "EmailJS", "JSON Web Tokens (JWT)", "React Router", "geocoding API", "axios", "Node.js", "Express", "MongoDB", "Mongoose", "AtlasDB"],
             "imgLocation": "yogamb.png",
             "repoAddress": "https://github.com/jdeleonardis/yoga_with_melissa_bennett_react",
             "deployedAddress": "https://yogawithmelissabennett.com",

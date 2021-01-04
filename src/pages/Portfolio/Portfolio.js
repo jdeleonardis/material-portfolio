@@ -4,9 +4,11 @@ import PortfolioContainer from '../../components/PortfolioContainer/PortfolioCon
 import portfolioData from '../../utils/projectdata.json'
 
 export default function Portfolio() {
+
   return (
 
     <div style={{marginTop: '60px', marginLeft: '100px', marginRight: '40px'}}>
+      
 
       <PageHeader pageTitle='PORTFOLIO'/>
 
