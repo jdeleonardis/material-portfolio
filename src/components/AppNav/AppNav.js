@@ -130,7 +130,7 @@ export default function AppNav() {
     if (path=== "/" && selectedIndex !== 0) setSelectedIndex(0);
     else if (path=== "/about" && selectedIndex !== 1) setSelectedIndex(1);
     else if (path=== "/portfolio" && selectedIndex !== 2) setSelectedIndex(2);    
-    else if (path=== "/contact" && selectedIndex !== 3) setSelectedIndex(4);
+    else if (path=== "/contact" && selectedIndex !== 3) setSelectedIndex(3);
 
   }, [location,selectedIndex,]);
 
