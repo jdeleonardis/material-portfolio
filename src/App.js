@@ -8,7 +8,6 @@ import Contact from "./pages/Contact/Contact.js";
 import Fab from './components/Fab/Fab'
 import "./App.css"
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
-//test
 
 function App() {
 
