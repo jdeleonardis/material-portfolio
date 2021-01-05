@@ -208,22 +208,11 @@ export default function AppNav() {
                 [classes.hide]: open,
               })}
             >
-              <MenuIcon 
-              // htmlColor='red'
-              />
+              <MenuIcon/>
             </IconButton>
-            {/* <Typography variant="h6" noWrap>
-              James L DeLeonardis
-            </Typography> */}
             <Typography variant="h6">
               <a href="/" style={{textDecoration: 'none', color: 'white'}}>James L DeLeonardis</a>
             </Typography>
-            {/* <div style={{width: '400px', textAlign: 'right'}}>
-              <ButtonGroup disableElevation variant="contained" color="primary">
-                <Button>One</Button>
-                <Button>Two</Button>            
-              </ButtonGroup>
-            </div> */}
           </Toolbar>
         </AppBar>
         <Drawer
@@ -242,33 +231,28 @@ export default function AppNav() {
           <div className={classes.toolbar}>
             <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon htmlColor='white'/>
-              {/* {theme.direction === 'rtl' ? <ChevronRightIcon htmlColor='white'/> : <ChevronLeftIcon htmlColor='white'/>} */}
             </IconButton>
           </div>
-          {/* <Divider /> */}
+          
           <List component='nav'>
             {['Home', 'About', 'Portfolio', 'Contact'].map((text, index) => (
 
-              //see HtmlToolTip declaration above
+              
               <HtmlTooltip     
               title={
                 <>
                   <Typography color="inherit">{text}</Typography>
-                  {/* <Typography color="inherit">Tooltip with HTML</Typography>
-                  <em>{"And here's"}</em> <b>{'some'}</b> <u>{'amazing content'}</u>.{' '}
-                  {"It's very engaging. Right?"} {text} */}
                 </>
               }
               enterDelay={600}
               enterNextDelay={600} 
+              key={text} 
             >
   
               <ListItem 
                   button
                   component={Link}
-                  to={text.toLowerCase()}
-                  key={text}
-                  // onClick={() => setCollapsed(!collapsed)}>
+                  to={text.toLowerCase()}                 
                   onClick={(event) => clickHandler(event, text, index)}
                   selected={selectedIndex === index}
                   >
@@ -287,19 +271,16 @@ export default function AppNav() {
               <HtmlTooltip     
               title={
                 <>
-                  {/* <Typography color="inherit">Tooltip with HTML</Typography>
-                  <em>{"And here's"}</em> <b>{'some'}</b> <u>{'amazing content'}</u>.{' '}
-                  {"It's very engaging. Right?"} {text} */}
                   <Typography color="inherit">{text}</Typography>
                 </>
               }
               enterDelay={600}
               enterNextDelay={600} 
+              key={text} 
             >
   
               <ListItem 
                   button
-                  key={text}
                   onClick={() => toSocialMedia(text)}                  
                   >
                   <ListItemIcon>                  

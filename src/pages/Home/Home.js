@@ -95,8 +95,8 @@ export default function Home() {
           >
           <Grid item xs={2} md={1} xl={0}> 
 
-            </Grid>
-          {/* <Grid item xs={11} sm={11} lg={8}> */}
+        </Grid>
+
           <Grid item xs={10} md={11} lg={7}>
             <ReferenceCarousel
               data={data}
