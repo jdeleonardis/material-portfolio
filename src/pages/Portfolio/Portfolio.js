@@ -31,7 +31,7 @@ export default function Portfolio() {
       {/* make special note of the column sizes passed in. Professional projects will be two to a row, school will be 3 to a row */}
       <PortfolioContainer 
         xs={12}
-        md={4}
+        md={4}        
         data={portfolioData}
         type="school"
       /> 
