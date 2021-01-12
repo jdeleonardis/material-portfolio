@@ -41,25 +41,6 @@ export default function PortfolioContainer(props) {
                           deployedAddress={project.deployedAddress}
                           repoAddress={project.repoAddress}
                         />
-
-                        {/* <a href={project.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
-                          <Button
-                          variant="contained"                          
-                          className={classes.buttonGreen}          
-                          startIcon={<ArrowForwardIosIcon />}
-                          >
-                            Deployed 
-                          </Button>
-                        </a>      
-                        <a href={project.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
-                          <Button
-                            variant="contained"                            
-                            className={classes.buttonBrown}                           
-                          >
-                            <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
-                            GitHub
-                          </Button>
-                        </a> */}
                     </Card>          
                 </Grid>
             ))}
