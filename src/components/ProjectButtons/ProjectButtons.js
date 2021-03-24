@@ -25,26 +25,31 @@ const useStyles = makeStyles((theme) => ({
 export default function ProjectButtons(props) {
     const classes = useStyles();
 
-    return (    
+    return (                
+        
         <div className={classes.buttonContainer}>
+            {(props.deployedAddress) ?
             <a href={props.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
-            <Button
-            variant="contained"                          
-            className={classes.buttonGreen}          
-            startIcon={<ArrowForwardIosIcon />}
-            >
-            Deployed 
-            </Button>
-        </a>      
-        <a href={props.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
-            <Button
-            variant="contained"                            
-            className={classes.buttonBrown}                           
-            >
-            <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
-            GitHub
-            </Button>
-        </a>
+                <Button
+                variant="contained"                          
+                className={classes.buttonGreen}          
+                startIcon={<ArrowForwardIosIcon />}
+                >
+                    Deployed 
+                </Button>
+            </a>      
+            :
+            null
+            }
+            <a href={props.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
+                <Button
+                variant="contained"                            
+                className={classes.buttonBrown}                           
+                >
+                    <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
+                    GitHub
+                </Button>
+            </a>
       </div>
     );
 }
