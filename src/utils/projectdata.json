@@ -104,7 +104,17 @@
             "repoAddress": "https://github.com/jdeleonardis/yoga_with_melissa_bennett_react",
             "deployedAddress": "https://yogawithmelissabennett.com",
             "type": "professional"
-        }     
+        }
+        ,
+        {
+            "id": 11,
+            "appName": "Our National Conversation",
+            "description": "As a Front End Developer Intern with Our National Conversation, it was my responsibility to work with the UI/UX team using Figma designs to create pages for the ONC application. This included pages such as the Writer's Dashboard, which is critical to the website for entering content; a feed component that retrieves social media such as blog posts and articles from outside sources; and, pictured above, the Temporary Landing Page (visible until the main website goes live), created to allow users to view blog entries made by other interns as well as purchase the book 'Let's Fix America'. ",
+            "techUsed": ["React","React-Bootstrap","Figma"],
+            "imgLocation": "ONC.png",
+            "repoAddress": "https://github.com/jakmus598/ournationalconversation",            
+            "type": "professional"
+        }                 
                  
     ]
 }
