@@ -28,7 +28,7 @@ export default function PortfolioContainer(props) {
                             <Typography gutterBottom variant="h5" component="h2">
                                 {project.appName}
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" component="p">
                                 {project.description}                            
                             </Typography>
                         </CardContent>

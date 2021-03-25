@@ -28,28 +28,41 @@ export default function ProjectButtons(props) {
     return (                
         
         <div className={classes.buttonContainer}>
-            {(props.deployedAddress) ?
-            <a href={props.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
-                <Button
-                variant="contained"                          
-                className={classes.buttonGreen}          
-                startIcon={<ArrowForwardIosIcon />}
-                >
-                    Deployed 
-                </Button>
-            </a>      
+            
+            { (!props.deployedAddress && !props.repoAddress) ?
+                <p style={{paddingLeft: '10px', fontWeight: 'bold'}}>This application is not yet deployed and the repo is private. Please ask to see a demo!</p>
+
             :
-            null
+                null
             }
-            <a href={props.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
-                <Button
-                variant="contained"                            
-                className={classes.buttonBrown}                           
-                >
-                    <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
-                    GitHub
-                </Button>
-            </a>
+
+            {(props.deployedAddress) ?
+                <a href={props.deployedAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>
+                    <Button
+                    variant="contained"                          
+                    className={classes.buttonGreen}          
+                    startIcon={<ArrowForwardIosIcon />}
+                    >
+                        Deployed 
+                    </Button>
+                </a>      
+            :
+                null
+            }
+
+            {(props.repoAddress) ?
+                <a href={props.repoAddress} rel="noopener noreferrer" target="_blank" style={{textDecoration: 'none'}}>                        
+                    <Button
+                    variant="contained"                            
+                    className={classes.buttonBrown}                           
+                    >
+                        <FontAwesomeIcon icon={faGithub} style={{marginRight: '12px'}}/>
+                        GitHub
+                    </Button>
+                </a>
+            :
+                null
+            }
       </div>
     );
 }

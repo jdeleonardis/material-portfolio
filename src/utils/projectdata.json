@@ -90,8 +90,7 @@
             "appName": "Morrisville Cat Hospital",
             "description": "This application is currently being written for a business owner/veterinarian in Morrisville, NC with special emphasis placed on mobile responsiveness and Section 508 Accessibility. The site is a MERN stack application, and uses several React libraries to handle the many forms that the business needs. When a form is completed and submitted, an email is sent (using Nodemailer) to the business including all form answers. There are several interesting UX elements on the site, including glassmorphism on the front page, buttons that transform when hovered over, and extensive user interaction 'helpers' such as toasts notifying users of successful form interactions and gentle 'reminders' on user errors or form incompletion.",
             "techUsed": ["React","React-Bootstrap", "Formik/Yup", "React-Media", "React-Reveal", "React-Toastify", "React-Datepicker", "recaptcha", "Node.js", "Express", "Nodemailer", "React Router", "Media queries"],
-            "imgLocation": "MCH.png",
-            "repoAddress": "https://github.com/jdeleonardis/morrisville_cat_hospital",
+            "imgLocation": "MCH1.png",            
             "type": "professional"
         }         
         ,
@@ -111,8 +110,7 @@
             "appName": "Our National Conversation",
             "description": "As a Front End Developer Intern with Our National Conversation, it was my responsibility to work with the UI/UX team using Figma designs to create pages for the ONC application. This included pages such as the Writer's Dashboard, which is critical to the website for entering content; a feed component that retrieves social media such as blog posts and articles from outside sources; and, pictured above, the Temporary Landing Page (visible until the main website goes live), created to allow users to view blog entries made by other interns as well as purchase the book 'Let's Fix America'. ",
             "techUsed": ["React","React-Bootstrap","Figma"],
-            "imgLocation": "ONC.png",
-            "repoAddress": "https://github.com/jakmus598/ournationalconversation",            
+            "imgLocation": "ONC.png",            
             "type": "professional"
         }                 
                  
