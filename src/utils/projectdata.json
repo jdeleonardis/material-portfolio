@@ -90,7 +90,8 @@
             "appName": "Morrisville Cat Hospital",
             "description": "This application is currently being written for a business owner/veterinarian in Morrisville, NC with special emphasis placed on mobile responsiveness and Section 508 Accessibility. The site is a MERN stack application, and uses several React libraries to handle the many forms that the business needs. When a form is completed and submitted, an email is sent (using Nodemailer) to the business including all form answers. There are several interesting UX elements on the site, including glassmorphism on the front page, buttons that transform when hovered over, and extensive user interaction 'helpers' such as toasts notifying users of successful form interactions and gentle 'reminders' on user errors or form incompletion.",
             "techUsed": ["React","React-Bootstrap", "Formik/Yup", "React-Media", "React-Reveal", "React-Toastify", "React-Datepicker", "recaptcha", "Node.js", "Express", "Nodemailer", "React Router", "Media queries"],
-            "imgLocation": "MCH1.png",            
+            "imgLocation": "MCH1.png",    
+            "deployedAddress": "https://jdeleonardis-mch.herokuapp.com/",        
             "type": "professional"
         }         
         ,

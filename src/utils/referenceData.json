@@ -88,6 +88,30 @@
             "giver": "Jessica Ringler",
             "title": "Teacher",
             "company": "Chatham County Schools"
-        }                           
+        },
+        {
+            "id": 12,
+            "order": 12,
+            "recommendation": "Immediately, he caught on - what took some developers months to understand, Jay did so in just minutes. It was clear he had a far deeper understanding of how software worked than anyone else on the team.",
+            "giver": "Jake Musleh",
+            "title": "Development Engineer",
+            "company": "Amazon"
+        },                                   
+        {
+            "id": 13,
+            "order": 13,
+            "recommendation": "Working with Jay has been an absolute pleasure and I sincerely hope I will be able to do so again in the future. He is a brilliant developer with an unparalleled ability to communicate with and lead his team.",
+            "giver": "Jake Musleh",
+            "title": "Development Engineer",
+            "company": "Amazon"
+        },                                           
+        {
+            "id": 14,
+            "order": 14,
+            "recommendation": "We have several student interns working on this project, and Jay's 'lead by example' style has had a very positive, multiplier effect among our students. He is very practical, quick with solutions.",
+            "giver": "Jeffrey Hall",
+            "title": "Editor and CEO",
+            "company": "The Latest.com, Inc"
+        }                                                   
     ]
 }

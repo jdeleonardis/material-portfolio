@@ -13,8 +13,9 @@ function ReferenceCarousel(props) {
             const j = Math.floor(Math.random() * (i + 1));
             [referenceArray[i], referenceArray[j]] = [referenceArray[j], referenceArray[i]];
         }
+        console.log(referenceArray)
     }
-
+    
     shuffleArray(referenceArray);
     
 
